@@ -1,0 +1,105 @@
+
+#fab-container {
+  all: initial;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2147483647;
+}
+
+.fab-btn {
+  all: initial;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  background-size: 28px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  transition: transform .1s ease, box-shadow .2s ease;
+}
+.fab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+}
+
+/* Drive icon */
+#gdrive-fab {
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+  <path fill='%231E88E5' d='M12.99 3L21 16.5l-4 4L9 7z'/>\
+  <path fill='%2343A047' d='M3 16.5L7 20l10-13-4-4z'/>\
+  <path fill='%23FBBC05' d='M7 20h10l4-3.5H11z'/>\
+</svg>");
+}
+
+/* Gemini icon (stylized G) */
+#gemini-fab {
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+  <circle cx='12' cy='12' r='10' fill='%231E88E5'/>\
+  <text x='12' y='16' font-size='12' text-anchor='middle' fill='white' font-family='Arial, sans-serif'>G</text>\
+</svg>");
+}
+
+/* Panel styling same as before */
+#gdrive-panel {
+  all: initial;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 2147483647;
+  display: none;
+}
+#gdrive-panel .gd-inner {
+  all: initial;
+  display: block;
+  width: 340px;
+  max-width: calc(100vw - 40px);
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
+  padding: 14px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+  color: #222;
+}
+#gdrive-panel #gd-input {
+  all: initial;
+  width: calc(100% - 20px);
+  font-size: 15px;
+  line-height: 1.4;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  outline: none;
+}
+#gdrive-panel #gd-input:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30,136,229,0.12);
+}
+#gdrive-panel .gd-actions {
+  all: initial;
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+#gdrive-panel button {
+  all: initial;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #1e88e5;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+#gdrive-panel button.gd-secondary {
+  background: #f1f3f4;
+  color: #333;
+}

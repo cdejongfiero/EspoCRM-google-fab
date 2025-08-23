@@ -1,0 +1,10 @@
+{
+  "scriptList": [
+    "__APPEND__",
+    "client/custom/fab.js"
+  ],
+  "developerModeScriptList": [
+    "__APPEND__",
+    "client/custom/fab.js"
+  ]
+}

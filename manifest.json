@@ -1,0 +1,11 @@
+{
+  "name": "GDrive & GeminiAI Dual FAB",
+  "label": "GDrive & GeminiAI Dual FAB",
+  "version": "1.0.0",
+  "type": "extension",
+  "acceptableVersions": [
+    ">=9.0.0 <10.0.0"
+  ],
+  "author": "Daniel Giovannetti",
+  "description": "Floating dual FAB (Drive search + Gemini AI) for EspoCRM 9.x"
+}
