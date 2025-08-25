@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Approximation of the official Gmail multicolor M -->
+  <rect width="48" height="48" rx="10" fill="#ffffff"/>
+  <path d="M8 16v16a4 4 0 0 0 4 4h4V20L24 26l8-6v16h4a4 4 0 0 0 4-4V16L24 28 8 16z" fill="#EA4335"/>
+  <path d="M12 16l12 9 12-9v-2a4 4 0 0 0-4-4H16a4 4 0 0 0-4 4v2z" fill="#FFC107"/>
+  <path d="M12 36h4V20l-4-3v19z" fill="#34A853"/>
+  <path d="M32 36h4V17l-4 3v16z" fill="#4285F4"/>
+</svg>

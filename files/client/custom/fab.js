@@ -38,6 +38,8 @@
     `;
     document.body.appendChild(cont);
 
+    ensureMiniIcons();
+
     // Listeners
     document.getElementById('gdrive-fab').addEventListener('click', openDrivePanel);
     document.getElementById('gemini-fab').addEventListener('click', function(){
@@ -66,6 +68,33 @@
         closeGwsMenu();
       });
     }
+  }
+
+  // Ensure visible icons inside mini FABs (inline <img> as fallback over CSS backgrounds)
+  function ensureMiniIcons() {
+    try {
+      var iconMap = {
+        'gws-sheets': 'client/custom/icons/sheets.svg',
+        'gws-docs':   'client/custom/icons/docs.svg',
+        'gws-slides': 'client/custom/icons/slides.svg',
+        'gws-forms':  'client/custom/icons/forms.svg'
+      };
+      Object.keys(iconMap).forEach(function(id){
+        var el = document.getElementById(id);
+        if (!el) return;
+        var img = el.querySelector('img');
+        if (!img) {
+          img = document.createElement('img');
+          img.alt = '';
+          img.width = 30; img.height = 30;
+          img.style.display = 'block';
+          img.style.pointerEvents = 'none';
+          el.appendChild(img);
+        }
+        // cache-bust so updates appear after rebuild
+        img.src = iconMap[id] + '?r=' + Date.now();
+      });
+    } catch(e) { /* no-op */ }
   }
 
   function openDrivePanel() {
@@ -169,6 +198,8 @@
     var menu = document.getElementById('gws-menu');
     var wsFab = document.getElementById('workspace-fab');
     if (!menu || !wsFab) return;
+    // make sure icons are present and visible before opening
+    ensureMiniIcons();
     var open = menu.classList.toggle('open');
     menu.setAttribute('aria-hidden', open ? 'false' : 'true');
     wsFab.classList.toggle('active', open);
@@ -186,6 +217,8 @@
   function init() {
     addCssOnce();
     ensureFabs();
+    // When container already exists (SPA), still ensure icons are present
+    ensureMiniIcons();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init, { once: true });

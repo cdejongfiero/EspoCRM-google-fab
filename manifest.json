@@ -1,7 +1,7 @@
 {
   "name": "EspoCRM Google FAB",
   "label": "EspoCRM Google FAB",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "type": "extension",
   "acceptableVersions": [
     ">=9.0.0 <10.0.0"
