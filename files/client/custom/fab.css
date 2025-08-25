@@ -157,7 +157,7 @@
 
 /* Layout when menu is open (single horizontal row to the left of the Workspace FAB, vertically centered) */
 #gws-menu.open { pointer-events: auto; }
-#gws-menu.open #gws-sheets { transform: translate(-64px,   -50px); opacity: 1; transition-delay: 0ms; }
-#gws-menu.open #gws-docs   { transform: translate(-128px,  -50px); opacity: 1; transition-delay: 40ms; }
-#gws-menu.open #gws-slides { transform: translate(-192px,  -50px); opacity: 1; transition-delay: 80ms; }
-#gws-menu.open #gws-forms  { transform: translate(-256px,  -50px); opacity: 1; transition-delay: 120ms; }
+#gws-menu.open #gws-sheets { transform: translate(-264px,  -50px); opacity: 1; transition-delay: 0ms; }
+#gws-menu.open #gws-docs   { transform: translate(-328px,  -50px); opacity: 1; transition-delay: 40ms; }
+#gws-menu.open #gws-slides { transform: translate(-392px,  -50px); opacity: 1; transition-delay: 80ms; }
+#gws-menu.open #gws-forms  { transform: translate(-456px,  -50px); opacity: 1; transition-delay: 120ms; }
